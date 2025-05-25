@@ -1,0 +1,26 @@
+apiVersion: app/v1
+kind: Deployment
+metadata:
+  name: barbie-app-deployment
+spec: #defines the deployment behaviour
+  replicas: 3
+  selector: 
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: web
+    spec: #defines the pod behaviour
+      containers:
+      - name: cards-app
+        image: muralisocial123/flower-app:1.0 
+        resources:
+          limits:
+            memory: "250Mi"
+            cpu: "100m"
+          requests:
+            memory: "128Mi"
+            cpu:  "50"
+        ports:
+        - containerPort: 3015
