@@ -6,7 +6,7 @@ spec: #defines the deployment behaviour
   replicas: 3
   selector: 
     matchLabels:
-      app: myapp
+      app: web
   template:
     metadata:
       labels:
@@ -21,6 +21,6 @@ spec: #defines the deployment behaviour
             cpu: "100m"
           requests:
             memory: "128Mi"
-            cpu:  "50"
+            cpu:  "50m"
         ports:
         - containerPort: 3015
