@@ -1,7 +1,7 @@
-apiVersion: app/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flower-app-deployment
+  name: barbie-app-deployment
 spec: #defines the deployment behaviour
   replicas: 3
   selector: 
