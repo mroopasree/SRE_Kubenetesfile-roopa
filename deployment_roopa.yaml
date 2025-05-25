@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: barbie-app-deployment
+  name: roopa-app-deployment
 spec: #defines the deployment behaviour
   replicas: 3
   selector: 
